@@ -6,11 +6,11 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          I am currently co-founder of CallHQ.ai, building real-time voice AI for
-          businesses. I am a technologist at heart with strong business judgment—
-          I enjoy going from product strategy to hands-on engineering. My background
-          spans leadership at Adobe, founding Broki and CallHQ, and shipping
-          full-stack products end to end.
+          I'm Vishesh Sanghvi, a proactive full-stack developer passionate about
+          creating dynamic web experiences. From frontend to backend, I thrive on
+          solving complex problems with clean, efficient code. I help founders
+          turn ideas into seamless digital experiences using modern research and
+          cutting-edge technology.
         </p>
       </div>
     </div>

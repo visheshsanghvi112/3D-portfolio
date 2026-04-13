@@ -203,10 +203,11 @@
   bottom: 40px;
   top: inherit;
   z-index: 9;
+  text-align: center;
 }
 
 .landing-info h3 {
-  font-size: 22px;
+  font-size: 16px;
   letter-spacing: 2px;
   font-weight: 300;
   color: var(--accentColor);
@@ -215,12 +216,12 @@
 
 .landing-info h2 {
   margin: 0;
-  margin-top: -20px;
-  margin-left: 20px;
+  margin-top: -10px;
+  margin-left: 10px;
   font-family: "Geist", sans-serif;
   font-weight: 600;
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 26px;
+  line-height: 34px;
   position: relative;
   display: flex;
   flex-wrap: nowrap;
@@ -235,7 +236,7 @@
 
 h2.landing-info-h2 {
   color: #14b8a6;
-  font-size: 42px;
+  font-size: 34px;
   width: 120%;
   margin: 0;
   font-family: "Geist", sans-serif;

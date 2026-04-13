@@ -88,10 +88,11 @@ const WhatIDo = () => {
 
             <div className="what-content-in">
               <h3>AI & AUTOMATION</h3>
-              <h4>Workflow Intelligence for Organizations</h4>
+              <h4>Turning Ideas into Intelligence</h4>
               <p>
-                AI specialist helping organizations automate workflows—internal ops
-                and customer-facing—so teams ship faster with less manual work.
+                AI specialist helping founders and startups automate workflows
+                to move from concept to scale faster with high-performance,
+                intelligent digital experiences.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
