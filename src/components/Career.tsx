@@ -15,57 +15,43 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Full Stack Developer</h4>
+                <h4>Software Development Engineer</h4>
+                <h5>Ambica Pharma</h5>
+              </div>
+              <h3>2024-PRESENT</h3>
+            </div>
+            <p>
+              Building scalable Python and FastAPI microservices, production ETL
+              pipelines, and cloud-native systems on Azure and GCP with Docker,
+              CI/CD automation, and high-availability monitoring.
+            </p>
+          </div>
+          <div className="career-info-box">
+            <div className="career-info-in">
+              <div className="career-role">
+                <h4>Freelance Software Developer</h4>
                 <h5>Independent</h5>
               </div>
-              <h3>2020–PRESENT</h3>
+              <h3>2021-2024</h3>
             </div>
             <p>
-              Successfully delivered 50+ projects to 30+ clients globally.
-              Specializing in high-performance web applications, AI-powered
-              solutions, and seamless digital experiences.
+              Delivered full-stack web products for clients from requirement
+              gathering to deployment, integrating APIs and building secure,
+              performant backend logic with Python, JavaScript, Firebase, and SQL.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>AI & Machine Learning</h4>
-                <h5>Innovation Phase</h5>
+                <h4>Backend & Cloud Engineering</h4>
+                <h5>Production Systems Focus</h5>
               </div>
-              <h3>2024-25</h3>
+              <h3>CORE EXPERTISE</h3>
             </div>
             <p>
-              Developed advanced AI tools including visheshdesignai (interior design),
-              chatbotspecial (LLM-powered), and integrated intelligent systems
-              using OpenAI, LangChain, and Hugging Face.
-            </p>
-          </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>Enterprise Web Solutions</h4>
-                <h5>Growth Phase</h5>
-              </div>
-              <h3>2023-24</h3>
-            </div>
-            <p>
-              Built comprehensive web applications and corporate platforms for
-              various industries, including pharmaceuticals (Ambica, Baker Davis)
-              and research organizations (JHC Research).
-            </p>
-          </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>Frontend & Performance</h4>
-                <h5>Foundation Phase</h5>
-              </div>
-              <h3>2021-23</h3>
-            </div>
-            <p>
-              Focused on mastering modern frontend architectures (React, Next.js)
-              and performance optimization, contributing to open-source and
-              building 3D interactive experiences.
+              Focused on backend architecture, REST APIs, cloud deployment,
+              observability, and automation using Python, FastAPI, Docker,
+              Azure, GCP, SQL, MongoDB, and modern CI/CD workflows.
             </p>
           </div>
         </div>
