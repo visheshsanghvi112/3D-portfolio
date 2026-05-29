@@ -1,42 +1,22 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import "./styles/Work.css";
 import WorkImage from "./WorkImage";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
+import { allProjects } from "../data/projects";
 
-const projects = [
-  {
-    title: "Siriem Reimagined",
-    category: "Web App — Media Experience",
-    tools: "Remix, React, TypeScript, Tailwind CSS",
-    image: "https://vishesh-ai.vercel.app/projects/siriem-reimagined.png",
-    link: "https://siriem-reimagined.vercel.app",
-  },
-  {
-    title: "Ambica Pharma",
-    category: "Pharmaceutical Corporate Website",
-    tools: "HTML, CSS, JavaScript, Product Showcase",
-    image: "https://vishesh-ai.vercel.app/projects/ambica.png",
-    link: "https://ambicapharma.net",
-  },
-  {
-    title: "LearnBitcoin",
-    category: "Education — Blockchain & Crypto",
-    tools: "React, Vite, Tailwind CSS",
-    image: "https://vishesh-ai.vercel.app/projects/learnbitcoin.png",
-    link: "https://bitcoinlearn.vercel.app",
-  },
-  {
-    title: "Billifyy",
-    category: "Invoice Generator for Freelancers",
-    tools: "React, Vite, Tailwind CSS, Firebase",
-    image: "https://vishesh-ai.vercel.app/projects/billifyy.png",
-    link: "https://billifyy.vercel.app",
-  },
-];
+const projects = allProjects.filter((p) => p.featured);
 
 const Work = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+
+  // Preload all project images so slides don't flash on first view
+  useEffect(() => {
+    projects.forEach((p) => {
+      const img = new Image();
+      img.src = p.image;
+    });
+  }, []);
 
   const goToSlide = useCallback(
     (index: number) => {
@@ -49,23 +29,26 @@ const Work = () => {
   );
 
   const goToPrev = useCallback(() => {
-    const newIndex =
-      currentIndex === 0 ? projects.length - 1 : currentIndex - 1;
+    const newIndex = currentIndex === 0 ? projects.length - 1 : currentIndex - 1;
     goToSlide(newIndex);
   }, [currentIndex, goToSlide]);
 
   const goToNext = useCallback(() => {
-    const newIndex =
-      currentIndex === projects.length - 1 ? 0 : currentIndex + 1;
+    const newIndex = currentIndex === projects.length - 1 ? 0 : currentIndex + 1;
     goToSlide(newIndex);
   }, [currentIndex, goToSlide]);
 
   return (
     <div className="work-section" id="work">
       <div className="work-container section-container">
-        <h2>
-          My <span>Work</span>
-        </h2>
+        <div className="work-header">
+          <h2>
+            My <span>Work</span>
+          </h2>
+          <a href="/projects" className="view-all-link" data-cursor="disable">
+            View all projects →
+          </a>
+        </div>
 
         <div className="carousel-wrapper">
           {/* Navigation Arrows */}
@@ -90,9 +73,7 @@ const Work = () => {
           <div className="carousel-track-container">
             <div
               className="carousel-track"
-              style={{
-                transform: `translateX(-${currentIndex * 100}%)`,
-              }}
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
               {projects.map((project, index) => (
                 <div className="carousel-slide" key={index}>
@@ -103,11 +84,10 @@ const Work = () => {
                       </div>
                       <div className="carousel-details">
                         <h4>{project.title}</h4>
-                        <p className="carousel-category">
-                          {project.category}
-                        </p>
+                        <p className="carousel-category">{project.category}</p>
+                        <p className="carousel-description">{project.description}</p>
                         <div className="carousel-tools">
-                          <span className="tools-label">Tools & Features</span>
+                          <span className="tools-label">Tech Stack</span>
                           <p>{project.tools}</p>
                         </div>
                       </div>
@@ -130,8 +110,7 @@ const Work = () => {
             {projects.map((_, index) => (
               <button
                 key={index}
-                className={`carousel-dot ${index === currentIndex ? "carousel-dot-active" : ""
-                  }`}
+                className={`carousel-dot ${index === currentIndex ? "carousel-dot-active" : ""}`}
                 onClick={() => goToSlide(index)}
                 aria-label={`Go to project ${index + 1}`}
                 data-cursor="disable"
