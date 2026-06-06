@@ -4,7 +4,6 @@
   "framework": "vite",
   "rewrites": [
     {
-      "// Serve index.html only for routes without a file extension (SPA routing)",
       "source": "\\/((?!.*\\..+$).*)",
       "destination": "/index.html"
     }
