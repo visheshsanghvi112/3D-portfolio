@@ -129,7 +129,7 @@ const WhatIDo = () => {
               <h4>Shipping AI in Production</h4>
               <p>
                 I build the systems behind it: APIs, data, voice/real-time, and
-                full-stack products—production-ready, not slide decks.
+                production-ready software products—production-ready, not slide decks.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">

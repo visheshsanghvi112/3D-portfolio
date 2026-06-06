@@ -35,7 +35,7 @@ const Career = () => {
               <h3>2021-2024</h3>
             </div>
             <p>
-              Delivered full-stack web products for clients from requirement
+              Delivered end-to-end web products for clients from requirement
               gathering to deployment, integrating APIs and building secure,
               performant backend logic with Python, JavaScript, Firebase, and SQL.
             </p>
