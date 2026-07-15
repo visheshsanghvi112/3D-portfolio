@@ -15,14 +15,15 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Young Professional</h4>
+                <h4>Young Professional (Software Engineer)</h4>
                 <h5>SEBI</h5>
               </div>
               <h3>JUL 2026-PRESENT</h3>
             </div>
             <p>
               Working on professional assignments and projects while supporting
-              structured, outcome-focused initiatives as a Young Professional.
+              structured, outcome-focused initiatives as a Young Professional
+              and Software Engineer.
             </p>
           </div>
           <div className="career-info-box">
