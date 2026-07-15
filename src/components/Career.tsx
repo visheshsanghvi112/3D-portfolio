@@ -15,29 +15,28 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Software Development Engineer</h4>
-                <h5>Ambica Pharma</h5>
+                <h4>Young Professional</h4>
+                <h5>SEBI</h5>
               </div>
-              <h3>2024-PRESENT</h3>
+              <h3>JUL 2026-PRESENT</h3>
             </div>
             <p>
-              Building scalable Python and FastAPI microservices, production ETL
-              pipelines, and cloud-native systems on Azure and GCP with Docker,
-              CI/CD automation, and high-availability monitoring.
+              Working on professional assignments and projects while supporting
+              structured, outcome-focused initiatives as a Young Professional.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Freelance Software Developer</h4>
-                <h5>Independent</h5>
+                <h4>Software Development Engineer</h4>
+                <h5>Ambica Pharma</h5>
               </div>
-              <h3>2021-2024</h3>
+              <h3>2024-JUL 2026</h3>
             </div>
             <p>
-              Delivered end-to-end web products for clients from requirement
-              gathering to deployment, integrating APIs and building secure,
-              performant backend logic with Python, JavaScript, Firebase, and SQL.
+              Building scalable Python and FastAPI microservices, production ETL
+              pipelines, and cloud-native systems on Azure and GCP with Docker,
+              CI/CD automation, and high-availability monitoring.
             </p>
           </div>
           <div className="career-info-box">
