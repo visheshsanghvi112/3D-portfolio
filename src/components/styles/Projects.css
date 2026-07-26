@@ -1021,13 +1021,15 @@ body:has(.pp) .pp-bg {
   .pp-nav {
     padding: 16px 24px;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
   }
   
   .pp-nav-stats {
     order: 3;
     width: 100%;
     justify-content: space-between;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255,255,255,0.06);
   }
   
   .pp-hero {
@@ -1079,113 +1081,244 @@ body:has(.pp) .pp-bg {
 }
 
 @media (max-width: 600px) {
+  /* ── Nav: clean 2-row layout ─────────────────────────────────────── */
+  .pp-nav {
+    padding: 12px 16px;
+    gap: 8px;
+  }
+
+  .pp-nav-back {
+    font-size: 13px;
+    padding: 6px 12px;
+    gap: 4px;
+  }
+
+  .pp-nav-logo {
+    font-size: 14px;
+  }
+
+  .pp-nav-stats {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 6px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .pp-nav-count {
+    font-size: 12px;
+  }
+
+  .pp-filter-select {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  /* ── Hero ────────────────────────────────────────────────────────── */
+  .pp-hero {
+    padding: 56px 16px 36px;
+  }
+
+  .pp-hero-title {
+    font-size: clamp(28px, 9vw, 40px);
+    letter-spacing: -1px;
+  }
+
+  .pp-hero-subtitle {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* Stats: horizontal row with dividers — no vertical stacking */
+  .pp-hero-stats {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    gap: 0;
+    padding: 20px 0 0;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    margin-top: 24px;
+  }
+
+  .pp-stat {
+    flex: 1;
+    text-align: center;
+    position: relative;
+  }
+
+  .pp-stat:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 15%;
+    height: 70%;
+    width: 1px;
+    background: rgba(255,255,255,0.08);
+  }
+
+  .pp-stat-number {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  .pp-stat-label {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── Controls ────────────────────────────────────────────────────── */
+  .pp-controls {
+    padding: 0 16px 16px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .pp-search {
+    max-width: 100%;
+  }
+
+  .pp-search-input {
+    padding: 11px 44px 11px 44px;
+    font-size: 13px;
+    border-radius: 10px;
+  }
+
+  /* View toggle — full width, equal buttons */
+  .pp-view-toggle {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .pp-view-btn {
+    flex: 1;
+    height: 38px;
+    font-size: 18px;
+  }
+
+  /* ── Filter pills: horizontal scroll, no wrapping ────────────────── */
+  .pp-filters {
+    padding: 0 16px 24px;
+    gap: 8px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .pp-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pp-filter-pill {
+    flex-shrink: 0;
+    padding: 7px 12px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  /* ── Results count ───────────────────────────────────────────────── */
+  .pp-results {
+    padding: 0 16px 14px;
+    font-size: 12px;
+  }
+
+  /* ── Grid ────────────────────────────────────────────────────────── */
   .pp-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
+    padding: 0 16px 60px;
   }
-  
-  /* Reset 2-column stagger */
+
+  /* Reset 2-column masonry stagger */
   .pp-grid--masonry .pc:nth-child(2n+2) {
     margin-top: 0;
   }
-  
-  .pp-hero {
-    padding: 60px 20px 40px;
+
+  /* ── Cards ───────────────────────────────────────────────────────── */
+  .pc {
+    border-radius: 16px;
   }
-  
-  .pp-hero-title {
-    font-size: 36px;
-    letter-spacing: -1px;
-  }
-  
-  .pp-hero-subtitle {
-    font-size: 16px;
-  }
-  
-  .pp-hero-stats {
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .pp-controls {
-    padding: 0 20px 20px;
-  }
-  
-  .pp-search-input {
-    padding: 12px 44px 12px 44px;
-    font-size: 13px;
-  }
-  
-  .pp-filters {
-    padding: 0 20px 30px;
-    gap: 8px;
-  }
-  
-  .pp-filter-pill {
-    padding: 8px 14px;
-    font-size: 12px;
-  }
-  
-  .pp-results {
-    padding: 0 20px 16px;
-    font-size: 13px;
-  }
-  
-  .pp-grid {
-    padding: 0 20px 60px;
-  }
-  
-  .pc-content {
-    padding: 20px;
-  }
-  
-  .pc-title {
-    font-size: 20px;
-  }
-  
-  .pc-desc {
-    font-size: 13px;
-  }
-  
+
   .pc-badge {
-    width: 40px;
-    height: 40px;
-    font-size: 12px;
-    top: 16px;
-    left: 16px;
-  }
-  
-  .pc-header {
-    padding: 20px 20px 12px;
-  }
-  
-  .pc-arrow {
     width: 36px;
     height: 36px;
-    font-size: 16px;
+    font-size: 11px;
+    top: 14px;
+    left: 14px;
   }
-  
+
+  .pc-header {
+    padding: 16px 16px 10px;
+  }
+
+  .pc-arrow {
+    width: 34px;
+    height: 34px;
+    font-size: 15px;
+  }
+
+  /* Image aspect ratio — slightly taller on mobile for better preview */
+  .pc-img-wrap {
+    aspect-ratio: 16 / 9;
+  }
+
+  .pc-content {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .pc-title {
+    font-size: 18px;
+    letter-spacing: -0.3px;
+  }
+
+  .pc-desc {
+    font-size: 13px;
+    line-height: 1.6;
+    /* Clamp to 3 lines on mobile to keep cards compact */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .pc-tech {
+    padding-top: 14px;
+  }
+
+  .pc-pill {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+
+  /* ── Empty state ─────────────────────────────────────────────────── */
   .pp-empty {
-    padding: 60px 20px;
+    padding: 60px 16px;
   }
-  
+
   .pp-empty-icon {
-    font-size: 60px;
+    font-size: 56px;
   }
-  
+
   .pp-empty-title {
-    font-size: 22px;
+    font-size: 20px;
   }
-  
+
   .pp-empty-text {
     font-size: 14px;
   }
-  
+
+  /* ── Back to top ─────────────────────────────────────────────────── */
   .pp-back-to-top {
-    bottom: 20px;
-    right: 20px;
-    width: 44px;
-    height: 44px;
-    font-size: 18px;
+    bottom: 16px;
+    right: 16px;
+    width: 42px;
+    height: 42px;
+    font-size: 17px;
+  }
+
+  /* ── Footer ──────────────────────────────────────────────────────── */
+  .pp-footer {
+    padding: 32px 16px 24px;
   }
 }
